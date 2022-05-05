@@ -1,0 +1,156 @@
+@import url('https://fonts.googleeapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:sans-serif,'Poppins';
+}
+section{
+    position: relative;/*we can also put it as absolute*/
+    width: 100%;
+    height: 100vh;/*100vh means 100% with respect to viewport or the parent element */
+    display: flex;
+}
+.imgbx{
+    position: relative;/*relative bcoz either wise the form will be under our image */
+    width: 50%;/*these are for the height anfd width that we want to give*/
+    height: 100%;
+}
+.imgbx img{/*here no need to put the position relative*/
+    position: absolute;/*bcoz here we put only one image so, the position of image would be relative */
+    top: 0;/*these are for the margin*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*it will help in covering the whole image*/
+    opacity: 0.8;/*it is for the transperency of the image*/
+}
+.contentbx{
+    display: flex;/*just bcoz of it our loginbox is appear at the center*/
+    justify-content: center;/*becoz of it the content is at the center(align horizontally)*/
+    align-items: center;/*it will vertically align the loginbox at the center*/
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(rgb(217, 217, 235),rgb(111, 187, 238),rgb(151, 208, 241));
+}
+.formbx{
+    width: 50%;/*it is responsible for the width of the width of the login page*/
+    background-color: rgb(237, 242, 245);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 4px 6px 2px rgb(0, 0, 0);
+    padding: 20px;
+    
+
+}
+.formbx h2{
+    color: blueviolet;/*responsible for the color of the login page*/
+    font-weight: 600;/*it is responsible for the boldness of the text*/
+    font-size: 1.5em;/*1 em is equal to the 24px*/
+    text-transform: uppercase;/*it will help in converting the text into uppercase*/
+    margin-bottom: 20px;
+    border-bottom: 4px solid rgb(169, 125, 211);
+    display: inline-block;/*it will take the text as a block of text*/
+    letter-spacing: 1px;/*responsible for the space in between the text*/
+}
+.formbx .inputbx{
+    margin-bottom: 20px;/*responsible for the space between the input blocks*/
+}
+.inputbx span{
+    font-size: 16px;/*font size would be 16pa*/
+    margin-bottom: 5px;
+    display: inline-block;
+    color: rgb(227, 140, 235);/*same as above*/
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.inputbx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid rgb(183, 9, 252);/*bcoz of it the border of the input box would be colorfull that we gave to it */
+    font-size: 16px;
+    color: rgb(219, 44, 231);/*responsible for the color of the text*/
+    background: transparent;/*the background of the input box would be transparent it means it only depend on the color of the main input class box*/
+    border-radius: 30px;
+}
+.inputbx input[type="button"]/*the below responsible for the colr text font of the submit button*/
+{
+    background: violet;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;/*if i move the cusor over it the pointer will change*/
+}
+.inputbx input[type="button"]:hover{
+    background: rgb(219, 16, 219);/*if we hover over it it's color get change*/
+}
+.rememberbx{
+    margin-bottom: 10px;
+    color: rgb(151, 149, 144);/*responsible for the color of the remember box text*/
+    font-weight: 400;
+    font-size:14px;
+}
+.inputbx p{
+    color: rgb(12, 12, 12);/*same as above*/
+} 
+.inputbx p a{
+    color: lightslategrey;/*same as above*/
+}
+.formbx h3{
+    color: lightsteelblue;
+    text-align: center;
+    margin: 80px 0px 10px;
+    font-weight: 500;
+}
+.formbx .sci{
+    font-family:sans-serif;/*here i change the font family*/
+    font-size: large;
+    list-style-type: none;/*bcoz to show points or arrow before the list items*/
+    user-select: none;/*if we try to select the list items we can't do it*/
+    margin-left: 95px;
+}
+.sci li{
+    display: inline;/*bcoz of it the text would be appear in line*/
+    margin:0px 20px 20px 0px;
+}
+.sci li a i{
+    color: rgb(8, 8, 8);/*for the color of the font awesome icon*/
+}
+.formbx h3{
+    margin-top: 10px;
+}
+@media (max-width:760px){/*the below is for the responsive design*/
+    section .imgbx{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    section .contentbx{
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .formbx{
+        width: 100%;
+        padding: 40px;
+        background-color: rgb(252, 248, 248);/*if we change the size of the window the background will change to the white colour*/
+        margin: 50px;
+        opacity: 0.9;/*if we change the size of the window the transparency get change*/
+    }
+    .formbx h3{
+        color: rgb(5, 5, 5);/*if we change the size of the window the text will automatically get change*/
+        text-align: center;/*if we change the size of the window the text will adjust to the center*/
+        margin: 30px 0px 10px;
+        font-weight: 500;
+    }
+}
